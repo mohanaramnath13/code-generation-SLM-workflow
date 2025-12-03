@@ -51,3 +51,5 @@ python -m pip install "vllm==0.10.2"
 python -m pip install "transformers[sentencepiece]" huggingface_hub accelerate
 python -m pip install "datasets==2.14.2"
 python -m pip install sentencepiece tokenizers safetensors jsonlines
+conda install -y -c conda-forge pyarrow=11.0.0
+[pyarrow is needed to support datasets]
