@@ -54,9 +54,24 @@ python -m pip install "datasets==2.14.2"
 
 python -m pip install sentencepiece tokenizers safetensors jsonlines
 
-conda install -y -c conda-forge pyarrow=11.0.0
+conda install -y -c conda-forge "numpy<2" pyarrow=11.0.0 pandas
+[to match versions]
 
-[pyarrow is needed to support datasets]
+Check compatibility:
+python - <<'PY'
+import sys, numpy as np, pyarrow as pa, pandas as pd
+import torch, vllm, transformers, datasets
+print("Python:", sys.version.splitlines()[0])
+print("numpy:", np.__version__)
+print("pyarrow:", pa.__version__)
+print("pandas:", pd.__version__)
+print("datasets:", datasets.__version__)
+print("torch:", torch.__version__, "cuda:", torch.cuda.is_available(), "devices:", torch.cuda.device_count())
+print("vllm:", vllm.__version__)
+print("transformers:", transformers.__version__)
+PY
 
-python -m pip install --upgrade --force-reinstall "datasets==2.14.2"
+output:
+Python: 3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0] numpy: 1.26.4 pyarrow: 11.0.0 pandas: 2.3.3 datasets: 2.14.2 torch: 2.8.0+cu128 cuda: True devices: 2 vllm: 0.10.2 transformers: 4.57.3
+
 
