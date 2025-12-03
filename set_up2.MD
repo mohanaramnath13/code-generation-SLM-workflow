@@ -68,5 +68,8 @@ python -m pip install "transformers[sentencepiece]" huggingface_hub accelerate d
 
 python -m pip install sentencepiece tokenizers safetensors jsonlines
 
+git clone https://github.com/mohanaramnath13/lcb_fork1.git
+cd lcb_fork1
+ls -la
 
 
