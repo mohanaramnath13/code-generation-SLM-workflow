@@ -25,3 +25,25 @@ removal commands if necessary:
 conda deactivate
 rm -rf ~/LCB_setup1/env_1
 
+## 7. Installations:
+
+###    a) Set up tools:
+python -m pip install --upgrade pip setuptools wheel
+
+###    b) torch
+python -m pip install --upgrade "torch" --index-url https://download.pytorch.org/whl/cu121
+python -m pip install --upgrade torchvision --index-url https://download.pytorch.org/whl/cu121
+
+verifying: 
+python - <<'PY'
+import torch
+print("torch", torch.__version__, "cuda_available:", torch.cuda.is_available())
+print("CUDA devices:", torch.cuda.device_count())
+PY
+
+torch 2.5.1+cu121 cuda_available: True
+CUDA devices: 2
+
+###   c) vLLM
+python -m pip install "vllm==0.10.2"
+
