@@ -74,4 +74,15 @@ PY
 output:
 Python: 3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0] numpy: 1.26.4 pyarrow: 11.0.0 pandas: 2.3.3 datasets: 2.14.2 torch: 2.8.0+cu128 cuda: True devices: 2 vllm: 0.10.2 transformers: 4.57.3
 
+## 9. Cloning LCB
+cd ~/LCB_setup1/
+
+git clone https://github.com/LiveCodeBench/livecodebench.git
+
+cd ~/LCB_setup1/livecodebench
+
+pip install -e .
+
+
+
 
