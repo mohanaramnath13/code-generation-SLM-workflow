@@ -77,20 +77,29 @@ Python: 3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0] numpy: 1.26.4 pyarrow
 ## 9. Forking LCB and changing any requirements as necessary
 
 first, fork the official LCB repository to your own account.
+
 www.https://github.com/mohanaramnath13/lcb_fork1
 
 then :
+
 pip uninstall livecodebench -y
+
 git remote remove origin
+
 git remote add origin https://github.com/mohanaramnath13/lcb_fork1.git
+
 git remote -v
 
 modify dependencies inside pyproject.toml
+
 "datasets==2.14.2",
 
 push the change to my github:
+
 git add pyproject.toml
+
 git commit -m "Pin datasets to 2.14.2 to enforce pyarrow/numpy compatibility for local environment."
+
 git push origin main
 
 
