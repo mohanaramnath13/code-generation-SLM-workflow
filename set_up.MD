@@ -53,3 +53,5 @@ python -m pip install "datasets==2.14.2"
 python -m pip install sentencepiece tokenizers safetensors jsonlines
 conda install -y -c conda-forge pyarrow=11.0.0
 [pyarrow is needed to support datasets]
+python -m pip install --upgrade --force-reinstall "datasets==2.14.2"
+
