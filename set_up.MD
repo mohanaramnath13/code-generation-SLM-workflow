@@ -47,3 +47,5 @@ CUDA devices: 2
 ###   c) vLLM
 python -m pip install "vllm==0.10.2"
 
+## 8. Hugging Face + datasets + transformers + support libs (pin datasets to avoid dataset-script removal issue)
+python -m pip install "transformers[sentencepiece]" huggingface_hub accelerate
