@@ -49,3 +49,5 @@ python -m pip install "vllm==0.10.2"
 
 ## 8. Hugging Face + datasets + transformers + support libs (pin datasets to avoid dataset-script removal issue)
 python -m pip install "transformers[sentencepiece]" huggingface_hub accelerate
+python -m pip install "datasets==2.14.2"
+python -m pip install sentencepiece tokenizers safetensors jsonlines
