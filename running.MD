@@ -34,3 +34,7 @@ python -m lcb_runner.runner.main \
   --evaluate \
   --custom_output_file output/LLama3-8b-Ins/Scenario.codegeneration_20_0.7.jsonl \
   --debug
+
+## 6. Evaluated these metrics!
+
+# Faced problem with 15 problem limitation
