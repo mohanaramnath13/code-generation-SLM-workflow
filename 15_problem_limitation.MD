@@ -22,10 +22,11 @@ Modify the dataset name inside the LCB runner code.
 **Original (lite dataset):**
 ```python
 dataset = load_dataset("livecodebench/code_generation_lite", split="test", version_tag=release_version)
+```
 
-
-**Updated (dataset):**
+**Updated (dataset):
 ```python
 dataset = load_dataset("livecodebench/code_generation", split="test", version_tag=release_version)
+```
 
 # Faced the version_tag issue
