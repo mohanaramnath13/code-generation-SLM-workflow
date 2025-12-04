@@ -25,3 +25,12 @@ python -m lcb_runner.runner.main \
   --top_p 0.95 \
   --debug \
   --custom_output_save_name pass5_gen
+
+## 5.That just created the samples, need to evaluate
+
+python -m lcb_runner.runner.main \
+  --model meta-llama/Meta-Llama-3-8B-Instruct \
+  --scenario codegeneration \
+  --evaluate \
+  --custom_output_file output/LLama3-8b-Ins/Scenario.codegeneration_20_0.7.jsonl \
+  --debug
