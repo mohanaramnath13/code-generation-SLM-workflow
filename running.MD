@@ -13,3 +13,15 @@ python -m lcb_runner.runner.main --model meta-llama/Meta-Llama-3-8B-Instruct --s
 ## 3. Larger model with pass@5
 
 python -m lcb_runner.runner.main   --model meta-llama/Meta-Llama-3-8B-Instruct   --scenario codegeneration   --evaluate   --codegen_n 5   --debug   --n 1
+
+## 4. That didn't work, maybe need to add temperature and try to save the outputs
+
+python -m lcb_runner.runner.main \
+  --model meta-llama/Meta-Llama-3-8B-Instruct \
+  --scenario codegeneration \
+  --n 20 \
+  --codegen_n 5 \
+  --temperature 0.7 \
+  --top_p 0.95 \
+  --debug \
+  --custom_output_save_name pass5_gen
