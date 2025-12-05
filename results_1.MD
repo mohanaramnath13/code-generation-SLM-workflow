@@ -37,7 +37,7 @@ PY
 
 ## Output Summary
 
---- Failure Analysis by Platform and Difficulty (LOW TIMEOUT DATA) ---
+Failure Analysis by Platform and Difficulty (LOW TIMEOUT DATA)
 ================================================================================
 | platform   | difficulty   |   Total_Problems |   Total_Failures |   Pass@10_Rate |
 |:-----------|:-------------|-----------------:|-----------------:|---------------:|
