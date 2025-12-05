@@ -26,5 +26,5 @@ Remember to press and release **Ctrl+B** first.
 | **%**       | `Ctrl+B, %`      | Split the current window **Vertically** (useful for monitoring logs). |
 | **"**       | `Ctrl+B, "`      | Split the current window **Horizontally**. |
 
-my tmux: tmux new -s lcb_eval2
+my tmux: tmux new -s lcb_eval_2
 
