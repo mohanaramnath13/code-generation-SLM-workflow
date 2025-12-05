@@ -34,3 +34,43 @@ python -m lcb_runner.runner.main \
 So we just see evaluation now, scope for improvement: 
 1. using a different/larger model
 2. Finetuning this model
+
+
+
+
+
+
+# code for getting results 
+change directory name accordingly
+
+```python
+python - <<'PY'
+import json
+import pandas as pd
+import os
+
+FILE_PATH = "output/Qwen2.5-Coder-Ins-7B_10stimeout/Scenario.codegeneration_10_0.2_eval_all.json"
+
+if not os.path.exists(FILE_PATH):
+    print(f"\n Error: Detailed evaluation file not found at {FILE_PATH}.")
+    exit()
+
+data = json.load(open(FILE_PATH, 'r'))
+df = pd.DataFrame(data)
+
+df['Pass@10_Success'] = df['graded_list'].apply(lambda x: any(x))
+
+analysis = df.groupby(['platform', 'difficulty'])['Pass@10_Success'].agg(
+    Total_Problems='count',
+    Total_Failures=lambda x: (x == False).sum(),
+    Success_Rate='mean'
+).reset_index()
+
+failed_analysis = analysis.sort_values('Total_Failures', ascending=False)\
+                          .rename(columns={'Success_Rate': 'Pass@10_Rate'})
+
+print("\n" + "="*80)
+print("--- Failure Analysis by Platform and Difficulty (LOW TIMEOUT DATA) ---")
+print("="*80)
+print(failed_analysis.to_markdown(index=False, floatfmt=('.0f', '.0f', '.0f', '.2%')))
+```
