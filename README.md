@@ -5,8 +5,8 @@
 ## 3.running (theory to read)
 ## 4.15_problem_limitation
 ## 5.version_tag_syntax
-## 6.dataset_revision_issue.MD
-## 7.date_and_filterbydate.MD
+## 6.dataset_revision_issue
+## 7.date_and_filterbydate
 
 Initial command : do not use --debug as it limits the number of problems
 ``` python
@@ -24,3 +24,4 @@ python -m lcb_runner.runner.main \
 ## 8. evaluation
 ## 9. results of initial evaluation with low timeout
 ## 10. evaluation_with_timeout
+## 11. tmux
