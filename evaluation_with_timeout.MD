@@ -20,13 +20,6 @@ The goal was to safely store the **raw, inaccurate 400-problem results** that yo
 
 ## Next Step: Re-Evaluating with High Timeout
 
-### Link the Input File to the Expected Location:
-We will use a symbolic link (ln -s) to safely point the original folder name (Qwen2.5-Coder-Ins-7B) to your archived folder (Qwen2.5-Coder-Ins-7B_RawTimeout).
-```bash
-cd ~/LCB_setup2/lcb_fork1/output
-ln -s Qwen2.5-Coder-Ins-7B_RawTimeout Qwen2.5-Coder-Ins-7B
-```
-
 Now that the initial data is saved, run the evaluation command again. This time, we use the saved code solutions and just perform the testing step with a much higher time limit, which will generate the true, accurate scores.
 
 We are setting the timeout to **15 seconds** to allow slow-but-correct solutions to pass.
