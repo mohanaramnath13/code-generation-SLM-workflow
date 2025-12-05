@@ -36,3 +36,5 @@ python -m lcb_runner.runner.main \
 ```
 
 This run will create the new, correct **`_eval.json`** file in the `Qwen2.5-Coder-Ins-7B` output folder with hopefully significantly higher Pass@K scores.
+go to results_1
+
