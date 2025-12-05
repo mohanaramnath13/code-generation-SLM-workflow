@@ -51,45 +51,47 @@ Failure Analysis by Platform and Difficulty (LOW TIMEOUT DATA)
 | codeforces | medium       |                2 |                2 |       0        |
 | codeforces | easy         |                4 |                1 |       0.75     |
 
-Interpretation of Results
-Rank	Platform	Difficulty	Total Failures	Pass@10 Rate	Interpretation
-1	AtCoder	Hard	58	0.00%	Model failed every attempt → almost certainly TLE (timeouts).
-2	AtCoder	Medium	58	23.68%	Very high failure rate, indicating slow or inefficient algorithms.
-3	LeetCode	Medium	29	67.78%	Moderate error rate; failures likely due to problem constraints or TLE.
-4	LeetCode	Hard	22	24.14%	Expected perf on hard tasks, but TLE likely worsened the results.
+## Interpretation of Results
+
+| Rank | Platform  | Difficulty | Total Failures | Pass@10 Rate | Interpretation |
+|------|-----------|------------|----------------|--------------|----------------|
+| 1    | AtCoder   | Hard       | 58             | 0.00%        | Model failed every attempt → almost certainly TLE (timeouts). |
+| 2    | AtCoder   | Medium     | 58             | 23.68%       | Very high failure rate, indicating slow or inefficient algorithms. |
+| 3    | LeetCode  | Medium     | 29             | 67.78%       | Moderate error rate; failures likely due to problem constraints or TLE. |
+| 4    | LeetCode  | Hard       | 22             | 24.14%       | Expected performance on hard tasks, but TLE likely worsened the results. |
+
+---
 
 ## Interpretation Summary
-The key insight is that most failures—especially on AtCoder—are due to Time Limit Exceeded (TLE), not logical errors.
-Evidence:
 
-AtCoder Easy: 78.9% Pass@10
+The data shows that **most failures—especially on AtCoder—are caused by Time Limit Exceeded (TLE)** rather than incorrect logic.
 
-LeetCode Easy: 90.3% Pass@10
+### Evidence:
+- **AtCoder Easy:** 78.9% Pass@10  
+- **LeetCode Easy:** 90.3% Pass@10  
+- **AtCoder Hard:** 0% (complete failure consistent with TLE)  
+- **Codeforces Hard/Medium:** 0% (also consistent with TLE patterns)
 
-AtCoder Hard: 0% (all TLE-style failures)
+This indicates that the model is **functionally correct on simpler tasks**, but the generated solutions are **too slow for competitive programming constraints**, especially on AtCoder.
 
-Codeforces Hard/Medium: 0% (again consistent with TLE patterns)
+---
 
-The model is functionally correct on easier problems, but its generated code is too slow for AtCoder/Codeforces-level constraints.
+## Action Plan
 
-Action Plan
-1. Eliminate Timeouts (Immediate Priority)
-Increasing the timeout will separate:
+### 1. Eliminate Timeouts (Immediate Priority)
+Rerun evaluation with a higher timeout to distinguish:
+- **Performance failures (TLE)**  
+- **True logical errors**
 
-Speed problems (TLE)
+This step is necessary to obtain the model’s real algorithmic accuracy.
 
-True logical errors
+### 2. Post-Timeout Interpretation
+If Pass@10 remains low (**<30%**) on AtCoder Hard/Medium even after increasing the timeout:
 
-This is essential to reveal the model's actual algorithmic competence.
+- The issue is **algorithmic**, not performance-related.  
+- AtCoder tasks require deeper techniques (DP, graphs, math-heavy reasoning).  
+- Consider **fine-tuning Qwen** on datasets rich in AtCoder-style algorithmic problems.
 
-2. Post-Timeout Interpretation
-If AtCoder Hard/Medium remain low (<30% Pass@10):
-
-The issue is algorithmic, not performance.
-
-AtCoder tasks require advanced methods (DP, graphs, math), beyond vanilla LLM capabilities.
-
-Consider fine-tuning Qwen on a dataset rich in AtCoder-style competitive programming problems.
 
 ⏱️ Re-Evaluate with Higher Timeout (Run Now)
 ```python
