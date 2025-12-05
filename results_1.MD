@@ -11,7 +11,7 @@ import os
 FILE_PATH = "output/Qwen2.5-Coder-Ins-7B_rawtimeout/Scenario.codegeneration_10_0.2_eval_all.json"
 
 if not os.path.exists(FILE_PATH):
-    print(f"\n❌ Error: Detailed evaluation file not found at {FILE_PATH}.")
+    print(f"\n Error: Detailed evaluation file not found at {FILE_PATH}.")
     exit()
 
 data = json.load(open(FILE_PATH, 'r'))
