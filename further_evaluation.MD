@@ -1,3 +1,5 @@
+parser.py: default timeout : 6 seconds
+
 10 seconds timeout still yielded less result : 0.42474999999999996
 
 so I'm switching it to 30 seconds
