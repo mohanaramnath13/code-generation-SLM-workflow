@@ -50,6 +50,7 @@ Failure Analysis by Platform and Difficulty (LOW TIMEOUT DATA)
 | codeforces | hard         |                3 |                3 |       0        |
 | codeforces | medium       |                2 |                2 |       0        |
 | codeforces | easy         |                4 |                1 |       0.75     |
+
 Interpretation of Results
 Rank	Platform	Difficulty	Total Failures	Pass@10 Rate	Interpretation
 1	AtCoder	Hard	58	0.00%	Model failed every attempt → almost certainly TLE (timeouts).
