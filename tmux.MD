@@ -1,0 +1,1 @@
+That's a great idea! Tmux (short for Terminal Multiplexer) is an essential tool for working on remote servers like the one running your LiveCodeBench evaluation. It allows you to run long jobs and keep them active even if your SSH connection breaks or you close your laptop.
