@@ -92,8 +92,7 @@ AtCoder tasks require advanced methods (DP, graphs, math), beyond vanilla LLM ca
 Consider fine-tuning Qwen on a dataset rich in AtCoder-style competitive programming problems.
 
 ⏱️ Re-Evaluate with Higher Timeout (Run Now)
-bash
-Copy code
+```python
 python -m lcb_runner.runner.main \
     --model Qwen/Qwen2.5-Coder-7B-Instruct \
     --scenario codegeneration \
@@ -103,4 +102,4 @@ python -m lcb_runner.runner.main \
     --release_version main \
     --custom_output_save_name qwen2.5_coder_7b_pass5_50
 This will recompute Pass@k with fewer TLE failures, producing a more accurate skill profile of the model.
-
+```
