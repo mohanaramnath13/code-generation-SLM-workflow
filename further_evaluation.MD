@@ -70,7 +70,7 @@ failed_analysis = analysis.sort_values('Total_Failures', ascending=False)\
                           .rename(columns={'Success_Rate': 'Pass@10_Rate'})
 
 print("\n" + "="*80)
-print("--- Failure Analysis by Platform and Difficulty (LOW TIMEOUT DATA) ---")
+print("--- Failure Analysis by Platform and Difficulty (10s TIMEOUT DATA) ---")
 print("="*80)
 print(failed_analysis.to_markdown(index=False, floatfmt=('.0f', '.0f', '.0f', '.2%')))
 ```
