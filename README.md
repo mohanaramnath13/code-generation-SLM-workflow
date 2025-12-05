@@ -25,3 +25,6 @@ python -m lcb_runner.runner.main \
 ## 9. results of initial evaluation with low timeout
 ## 10. evaluation_with_timeout
 ## 11. tmux
+``` python
+tmux new -s lcb_final_eval
+```
