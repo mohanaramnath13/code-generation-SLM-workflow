@@ -40,6 +40,7 @@ So we just see evaluation now, scope for improvement:
 
 
 # code to find which file in the directory has the results
+[run this in the particulat directory with the results]
 ```python
 python - <<'PY'
 import json
