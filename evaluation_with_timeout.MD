@@ -20,7 +20,8 @@ The goal was to safely store the **raw, inaccurate 400-problem results** that yo
 
 ## Next Step: Re-Evaluating with High Timeout
 
-Now that the initial data is saved, run the evaluation command again. This time, we use the saved code solutions and just perform the testing step with a much higher time limit, which will generate the true, accurate scores.
+Now that the initial data is saved, run the evaluation command again. 
+## Regenerating the code to avoid any confusions.
 
 We are setting the timeout to **15 seconds** to allow slow-but-correct solutions to pass.
 
@@ -28,11 +29,10 @@ We are setting the timeout to **15 seconds** to allow slow-but-correct solutions
 python -m lcb_runner.runner.main \
     --model Qwen/Qwen2.5-Coder-7B-Instruct \
     --scenario codegeneration \
-    --continue_existing_with_eval \
     --evaluate \
-    --timeout 15 \
+    --timeout 10 \
     --release_version main \
-    --custom_output_save_name qwen2.5_coder_7b_pass5_50
+    --custom_output_save_name qwen2.5_coder_7b_pass5_full_run
 ```
 
 This run will create the new, correct **`_eval.json`** file in the `Qwen2.5-Coder-Ins-7B` output folder with hopefully significantly higher Pass@K scores.
