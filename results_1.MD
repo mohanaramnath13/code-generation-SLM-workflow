@@ -33,9 +33,10 @@ print("--- Failure Analysis by Platform and Difficulty (LOW TIMEOUT DATA) ---")
 print("="*80)
 print(failed_analysis.to_markdown(index=False, floatfmt=('.0f', '.0f', '.0f', '.2%')))
 PY
-Output Summary
-ruby
-Copy code
+```
+
+## Output Summary
+
 --- Failure Analysis by Platform and Difficulty (LOW TIMEOUT DATA) ---
 ================================================================================
 | platform   | difficulty   |   Total_Problems |   Total_Failures |   Pass@10_Rate |
@@ -56,7 +57,7 @@ Rank	Platform	Difficulty	Total Failures	Pass@10 Rate	Interpretation
 3	LeetCode	Medium	29	67.78%	Moderate error rate; failures likely due to problem constraints or TLE.
 4	LeetCode	Hard	22	24.14%	Expected perf on hard tasks, but TLE likely worsened the results.
 
-Interpretation Summary
+## Interpretation Summary
 The key insight is that most failures—especially on AtCoder—are due to Time Limit Exceeded (TLE), not logical errors.
 Evidence:
 
