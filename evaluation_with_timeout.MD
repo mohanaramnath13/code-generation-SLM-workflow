@@ -23,7 +23,7 @@ The goal was to safely store the **raw, inaccurate 400-problem results** that yo
 Now that the initial data is saved, run the evaluation command again. 
 ## Regenerating the code to avoid any confusions.
 
-We are setting the timeout to **15 seconds** to allow slow-but-correct solutions to pass.
+We are setting the timeout to **10 seconds** to allow slow-but-correct solutions to pass.
 
 ```bash
 python -m lcb_runner.runner.main \
