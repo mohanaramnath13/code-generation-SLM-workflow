@@ -73,4 +73,5 @@ print("\n" + "="*80)
 print("--- Failure Analysis by Platform and Difficulty (10s TIMEOUT DATA) ---")
 print("="*80)
 print(failed_analysis.to_markdown(index=False, floatfmt=('.0f', '.0f', '.0f', '.2%')))
+PY
 ```
