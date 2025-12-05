@@ -39,6 +39,49 @@ So we just see evaluation now, scope for improvement:
 
 
 
+# code to find which file in the directory has the results
+```python
+python - <<'PY'
+import json
+import os
+
+# --- Configuration ---
+# The target directory where your result files are located
+SEARCH_DIR = "."
+# ---------------------
+
+def find_evaluation_log(directory):
+    """Searches for the file that contains the 'graded_list' key."""
+    
+    potential_files = [f for f in os.listdir(directory) if f.endswith('.json')]
+    
+    for filename in potential_files:
+        if filename.endswith('_eval_all.json'):
+            # This naming convention is the strongest hint, check it first
+            file_path = os.path.join(directory, filename)
+            try:
+                with open(file_path, 'r') as f:
+                    data = json.load(f)
+                
+                # Check for the key that only exists in the detailed evaluation log
+                if isinstance(data, list) and data and 'graded_list' in data[0]:
+                    print("=" * 80)
+                    print(f"✅ FOUND THE REQUIRED FILE: {filename}")
+                    print("This file contains the Pass/Fail results for every problem and is needed for analysis.")
+                    print("=" * 80)
+                    return filename
+            except Exception:
+                # Ignore files that aren't valid JSON or are corrupted
+                continue
+    
+    print("\n Could not automatically find the required '*_eval_all.json' file.")
+    print("Please ensure you ran the evaluation step (`--evaluate`) to generate the detailed graded results.")
+    return None
+
+find_evaluation_log(SEARCH_DIR)
+
+PY
+```
 
 # code for getting results 
 change directory name accordingly
