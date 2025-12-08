@@ -29,3 +29,4 @@ python -m lcb_runner.runner.main \
 tmux new -s lcb_final_eval
 ```
 ## 12. Further evaluation (10s and 30s output)
+## 13. Finetuning using rstar dataset
