@@ -1,5 +1,11 @@
 ## Final finetuning script resolving all version conflicts
 
+timed out halfway through tokenization so:
+```bash
+export NCCL_TIMEOUT=3600s
+accelerate launch finetune_rstar.py
+```
+
 ```python
 import torch
 import os
@@ -97,3 +103,4 @@ print("Saving final model...")
 trainer.save_model(OUTPUT_DIR)
 tokenizer.save_pretrained(OUTPUT_DIR)
 print(f"Done! Model saved to {OUTPUT_DIR}") ```
+
