@@ -1,4 +1,5 @@
 ## Final finetuning script resolving all version conflicts
+#### look into accelerate settings as well to resolve issues
 
 timed out 22% through tokenization so:
 ```bash
@@ -24,7 +25,7 @@ OUTPUT_DIR = "Qwen2.5-Coder-7B-rStar-Full"
 
 # --- 2. LOAD DATASET ---
 print("Loading microsoft/rStar-Coder (synthetic_sft)...")
-dataset = load_dataset("microsoft/rStar-Coder", "synthetic_sft", split="train")
+dataset = load_dataset("microsoft/rStar-Coder", "synthetic_sft", split="train[:20%]")
 
 def format_rstar_to_chat(row):
     # --- A. Prepare User Prompt ---
