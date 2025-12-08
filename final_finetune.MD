@@ -1,10 +1,12 @@
 ## Final finetuning script resolving all version conflicts
 
-timed out halfway through tokenization so:
+timed out 22% through tokenization so:
 ```bash
 export NCCL_TIMEOUT=3600s
 accelerate launch finetune_rstar.py
 ```
+
+and also only finetuning on 20% of the dataset
 
 ```python
 import torch
