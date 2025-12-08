@@ -1,7 +1,14 @@
+```bash
+nano ~/.cache/huggingface/accelerate/default_config.yaml
+```
+
+### manually setting gradient accumalation steps for matching
+
+``` python
 compute_environment: LOCAL_MACHINE
 debug: false
 deepspeed_config:
-  gradient_accumulation_steps: auto
+  gradient_accumulation_steps: 4
   offload_optimizer_device: cpu
   offload_param_device: none
   zero3_init_flag: true
@@ -21,3 +28,4 @@ tpu_env: []
 tpu_use_cluster: false
 tpu_use_sudo: false
 use_cpu: false
+```
