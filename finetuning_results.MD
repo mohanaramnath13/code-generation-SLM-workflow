@@ -1,3 +1,4 @@
+# Output of finetuning the model using deepspeed and accelerate:
 ```bash
 {'loss': 0.8772, 'grad_norm': 1.4924530982971191, 'learning_rate': 8.8e-07, 'epoch': 0.96}
 {'loss': 0.866, 'grad_norm': 1.4623550176620483, 'learning_rate': 8.000000000000001e-07, 'epoch': 0.96}
@@ -17,3 +18,15 @@ Saving final model...
 Saving final model...
 Done! Model saved to Qwen2.5-Coder-7B-rStar-Full
 ```
+
+Attempting to evaluate this model using LCB in the cloned conda environment:
+python -m lcb_runner.runner.main \
+    --model Qwen/Qwen2.5-Coder-7B-Instruct \
+    --local_model_path /home/kbs/model_checkpoints/Qwen_Finetunes/Qwen2.5-Coder-7B-rStar-Full \
+    --scenario codegeneration \
+    --n 50 \
+    --codegen_n 5 \
+    --temperature 0.7 \
+    --top_p 0.95 \
+    --release_version main \
+    --evaluate
