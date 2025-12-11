@@ -20,13 +20,14 @@ Done! Model saved to Qwen2.5-Coder-7B-rStar-Full
 ```
 
 Attempting to evaluate this model using LCB in the cloned conda environment:
+```python
 python -m lcb_runner.runner.main \
     --model Qwen/Qwen2.5-Coder-7B-Instruct \
-    --local_model_path /home/kbs/model_checkpoints/Qwen_Finetunes/Qwen2.5-Coder-7B-rStar-Full \
+    --local_model_path /home/kbs/LCB_setup2/lcb_fork1/Qwen2.5-Coder-7B-rStar-Full \
     --scenario codegeneration \
-    --n 50 \
-    --codegen_n 5 \
-    --temperature 0.7 \
-    --top_p 0.95 \
+    --codegen_n 10 \
+    --evaluate \
+    --timeout 10 \
     --release_version main \
-    --evaluate
+    --custom_output_save_name qwen2.5_coder_7b_finetuned_pass10_full_run
+```
