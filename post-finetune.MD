@@ -79,3 +79,27 @@ if truncated_samples:
 else:
     print("\n✅ SAFE. All samples fit within the limit.")
 ```
+
+So the output was 
+``` bash
+Loading data and tokenizer...
+Analyzing token lengths...
+
+Checked 500 samples.
+Samples exceeding 4096 tokens: 443 (88.6%)
+
+⚠️ WARNING: TRUNCATION DETECTED ⚠️
+Example Index: 0
+Original Length: 13516
+Model sees text ending at token 4096. The cut-off text looks like:
+----------------------------------------
+ allows more clubs to be handled in the future.
+
+But with large n, that's not possible for each pi.
+
+Wait, but in the example above, the approach of prioritizing y for the first club allowed both to be assigned. So what's
+----------------------------------------
+If you don't see the ```python code``` block above, your model trained on reasoning with NO ANSWERS.
+```
+
+We can see that the model was finetuned on the CoT and got cut off even before learning the code. So we can now finetune it just on the input output pairs.
