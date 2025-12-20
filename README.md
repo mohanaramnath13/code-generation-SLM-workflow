@@ -33,3 +33,8 @@ tmux new -s lcb_final_eval
 ## 14. trl_version_problem
 ## 15. final_finetune + accelerate settings
 ## 16. finetuning_results
+## 17. post-finetune
+## 18. I2O_finetune
+
+
+
