@@ -1,8 +1,13 @@
 ### Fine-tuning Update: Addressing Token Truncation
+
 **Issue Identified:** Initial evaluation revealed that while the model successfully generated reasoning traces, it failed to output the final code solution.
+
 **Root Cause:** The `rStar-Coder` dataset contains reasoning chains exceeding 13,000 tokens. With our context limit set to 4,096, approximately **88% of the dataset was truncated**, effectively stripping the ground-truth code from the end of the training examples.
+
 **Resolution:** The pipeline has been pivoted to fine-tune exclusively on **Input-Code pairs** (Direct Code). This ensures all training examples fit within the memory constraints.
+
 **Next Steps:** Training has been relaunched with the corrected setup. Future iterations may explore "Middle Truncation" or expanded context windows to re-integrate Chain-of-Thought capabilities.
+
 
 ```bash
 {'loss': 1.042, 'grad_norm': 970.0249633789062, 'learning_rate': 1.98e-05, 'epoch': 0.01}
