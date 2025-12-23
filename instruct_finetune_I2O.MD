@@ -11,13 +11,13 @@
 ================================================================================
 | platform   | difficulty   |   Total_Problems |   Total_Failures |   Pass@10_Rate |
 |:-----------|:-------------|-----------------:|-----------------:|---------------:|
-| leetcode   | medium       |               90 |               70 |      0.222222  |
-| atcoder    | medium       |               76 |               67 |      0.118421  |
 | atcoder    | hard         |               58 |               57 |      0.0172414 |
+| atcoder    | medium       |               76 |               67 |      0.118421  |
+| leetcode   | medium       |               90 |               70 |      0.222222  |
 | leetcode   | hard         |               29 |               28 |      0.0344828 |
 | atcoder    | easy         |               76 |               27 |      0.644737  |
 | leetcode   | easy         |               62 |               19 |      0.693548  |
-| codeforces | easy         |                4 |                3 |      0.25      |
 | codeforces | hard         |                3 |                3 |      0         |
 | codeforces | medium       |                2 |                2 |      0         |
+| codeforces | easy         |                4 |                3 |      0.25      |
 ```
