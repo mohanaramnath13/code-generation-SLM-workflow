@@ -9,4 +9,8 @@ python -m lcb_runner.runner.main \
     --timeout 30 \
     --release_version main \
     --custom_output_save_name qwen2.5_coder_7b_finetuned_pass10_full_run
+    --stop "<|im_end|>,<|endoftext|>,user,assistant"
 ```
+
+That got 1%, 14% : due to LCB regex not extracting appropriately.  
+### Final accuracy: 16% accuracy
