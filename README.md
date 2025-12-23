@@ -36,6 +36,6 @@ tmux new -s lcb_final_eval
 ## 17. post-finetune
 ## 18. I2O_finetune
 ## 19. I2O_evaluation
-
+## 20. instruct_finetune_I2O
 
 
