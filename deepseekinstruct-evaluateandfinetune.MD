@@ -24,3 +24,7 @@ results
 | codeforces | hard         |                3 |                3 |      0         |
 | codeforces | medium       |                2 |                2 |      0         |
 ```
+
+```
+python -m lcb_runner.runner.main     --model deepseek-ai/deepseek-coder-1.3b-instruct     --local_model_path /home/kbs/LCB_setup2/lcb_fork1/deepseek-coder-1.3b-instruct-rStar-I2O-2000/     --scenario codegeneration     --codegen_n 10     --evaluate     --timeout 30     --release_version main     --stop "<|im_end|>,<|endoftext|>,user,assistant
+```
