@@ -10,7 +10,7 @@ results
         "pass@5": 0.14621031746031746,
         "pass@10": 0.155,
 
---- Failure Analysis by Platform and Difficulty (LOW TIMEOUT DATA) ---
+--- Failure Analysis by Platform and Difficulty ---
 ================================================================================
 | platform   | difficulty   |   Total_Problems |   Total_Failures |   Pass@10_Rate |
 |:-----------|:-------------|-----------------:|-----------------:|---------------:|
