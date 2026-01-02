@@ -35,3 +35,20 @@ python -m lcb_runner.runner.main     --model deepseek-ai/deepseek-coder-1.3b-ins
 "pass@5": 0.13617063492063491,
 "pass@10": 0.1625
 ```
+
+```
+================================================================================
+--- Failure Analysis by Platform and Difficulty (10s TIMEOUT DATA) ---
+================================================================================
+| platform   | difficulty   |   Total_Problems |   Total_Failures |   Pass@10_Rate |
+|:-----------|:-------------|-----------------:|-----------------:|---------------:|
+| leetcode   | medium       |               90 |               84 |      0.0666667 |
+| atcoder    | medium       |               76 |               73 |      0.0394737 |
+| atcoder    | hard         |               58 |               57 |      0.0172414 |
+| atcoder    | easy         |               76 |               45 |      0.407895  |
+| leetcode   | easy         |               62 |               38 |      0.387097  |
+| leetcode   | hard         |               29 |               29 |      0         |
+| codeforces | easy         |                4 |                4 |      0         |
+| codeforces | hard         |                3 |                3 |      0         |
+| codeforces | medium       |                2 |                2 |      0         |
+```
