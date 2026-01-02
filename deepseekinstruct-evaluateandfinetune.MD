@@ -28,3 +28,10 @@ results
 ```
 python -m lcb_runner.runner.main     --model deepseek-ai/deepseek-coder-1.3b-instruct     --local_model_path /home/kbs/LCB_setup2/lcb_fork1/deepseek-coder-1.3b-instruct-rStar-I2O-2000/     --scenario codegeneration     --codegen_n 10     --evaluate     --timeout 30     --release_version main     --stop "<|im_end|>,<|endoftext|>,user,assistant
 ```
+
+### LORA finetuned:
+```
+"pass@1": 0.08524999999999999,
+"pass@5": 0.13617063492063491,
+"pass@10": 0.1625
+```
