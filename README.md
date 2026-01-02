@@ -1,3 +1,6 @@
+### finetune command :
+```PATH=$CONDA_PREFIX/bin:$PATH CUDA_HOME=$CONDA_PREFIX accelerate launch finetune_rstar_deepseek.py```
+
 # Order of files
 
 ## 1.setup
