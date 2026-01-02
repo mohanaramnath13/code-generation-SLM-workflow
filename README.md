@@ -1,7 +1,7 @@
 ### finetune command :
 ```PATH=$CONDA_PREFIX/bin:$PATH CUDA_HOME=$CONDA_PREFIX accelerate launch finetune_rstar_deepseek.py```
 ### local model evaluation:
-```python -m lcb_runner.runner.main     --model deepseek-ai/deepseek-coder-1.3b-instruct     --local_model_path /home/kbs/LCB_setup2/lcb_fork1/deepseek-coder-1.3b-instruct-rStar-I2O-2000     --scenario codegeneration     --codegen_n 10     --evaluate     --timeout 30     --release_version main     --stop "<|im_end|>,<|endoftext|>,user,assistant```
+```python -m lcb_runner.runner.main     --model deepseek-ai/deepseek-coder-1.3b-instruct     --local_model_path /home/kbs/LCB_setup2/lcb_fork1/deepseek-coder-1.3b-instruct-rStar-I2O-2000     --scenario codegeneration     --codegen_n 10     --evaluate     --timeout 30     --release_version main     --stop "<|im_end|>,<|endoftext|>,user,assistant"```
 # Order of files
 
 ## 1.setup
